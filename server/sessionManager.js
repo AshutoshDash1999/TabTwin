@@ -163,7 +163,7 @@ export function createSessionManager({ clientUrl, redisClient }) {
     };
 
     data.guests.push(guestData);
-    _logActivity(data, '${name} joined');
+    _logActivity(data, `${name} joined`);
     await _save(data);
 
     const entry = _socketEntry(sessionId);
